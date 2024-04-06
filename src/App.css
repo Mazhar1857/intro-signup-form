@@ -1,0 +1,35 @@
+#root {
+  position: relative;
+  min-height: 100dvh;
+}
+
+#root::before {
+  content: "";
+  background-color: rgb(255, 121, 120, 1);
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+}
+
+.container {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (min-width:30em) {
+  #root {
+      min-height: 100dvh;
+      background-image: url("assets/bg-intro-desktop.png");
+  }
+
+}
+
+@media (max-width:30em) {
+  #root {
+      min-height: 100dvh;
+      background-image: url("assets/bg-intro-mobile.png");
+  }
+}
